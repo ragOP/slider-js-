@@ -176,7 +176,7 @@
   </style>
 </head>
 <body>
-  <!-- Optional top strip (you can delete if not needed) -->
+
   <div class="top-strip">
     Benefits Review – Medicare Advantage Options 
   </div>
@@ -287,7 +287,7 @@
     </section>
   </main>
 
-  <!-- Minimal subscribe modal (no external deps) -->
+
   <div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal">
       <h3 id="modal-title">Don't miss out!</h3>
@@ -315,9 +315,7 @@
       }catch{ return null; }
     }
 
-    // ===================================
-    // PHONE BUTTON SWITCH (sub1 === "14")
-    // ===================================
+   
     (function(){
       const sub1 = getQueryParam('sub1');
       const newNumber = "+18334253169";
@@ -332,15 +330,12 @@
       }
     })();
 
-    // =========================
-    // SIMPLE MODAL DEBOUNCED UX
-    // =========================
+  
     const modal = document.getElementById('modal-backdrop');
     function showModal(){ modal.style.display = 'flex'; }
     function hideModal(){ modal.style.display = 'none'; }
 
-    // Auto-open once after a short delay (optional; comment out if not desired)
-    // setTimeout(showModal, 7000);
+   
   </script>
 </body>
 </html>
