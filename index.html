@@ -1,334 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="robots" content="noindex,nofollow" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>nationalsubsidyhelp.com</title>
-  <link rel="icon" href="img/favicon.png" sizes="32x32" />
-  <meta name="description" content="nationalsubsidyhelp.com" />
-
-  <!-- SAFE-MODE CSP: blocks third-party scripts/redirects. 
-       If you must allow a domain, add it to script-src/connect-src/img-src as needed. -->
-  <meta http-equiv="Content-Security-Policy"
-        content="
-          default-src 'self';
-          script-src 'self' 'unsafe-inline';
-          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-          font-src https://fonts.gstatic.com 'self';
-          img-src 'self' data: https:;
-          connect-src 'self';
-          frame-src 'self';
-          base-uri 'self';
-          form-action 'self';
-          frame-ancestors 'self';
-        ">
-
-  <!-- Minimal mobile-friendly base styles -->
-  <link href="css/bootstrap.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <title>Benefits Review  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href=".k.png" />
   <style>
+    /* ===============================
+       ZERO-DEPENDENCY RESET + TOKENS
+       =============================== */
     :root{
-      --ink:#0f172a;
-      --accent:#0015FF;
-      --accent2:#F00;
-      --cta:#22c55e;
-      --cta-dark:#16a34a;
-      --muted:#475569;
-      --rule:#e2e8f0;
-      --max:880px;
+      --ink:#0f0f0f;
+      --muted:#4b465f;
+      --bg:#ffffff;
+      --surface:#f6f8fa;
+      --brand:#1e3a8a;     /* deep blue */
+      --brand-2:#1751de;   /* brighter blue */
+      --accent:#00b050;    /* CTA green for buttons if needed */
+      --rule:#e5e7eb;
+      --ok:#39b54a;
+      --radius:12px;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --max: 980px;        /* page width */
+      --max-article: 780px;/* content width */
     }
-    html,body{margin:0;padding:0;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:#fff;color:var(--ink);}
-    .section-wrapper-main{max-width:var(--max);padding:20px 16px;margin:0 auto;}
-    h1{font-size:clamp(26px,4.5vw,40px);line-height:1.2;margin:8px 0 6px;}
-    h2{font-size:clamp(16px,2.9vw,20px);font-weight:400;color:var(--muted);line-height:1.45;margin:10px 0 20px;}
-    h3{font-size:clamp(18px,3.6vw,24px);line-height:1.3;margin:0 0 12px;}
-    .update-txt{display:inline-block;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;border-radius:999px;padding:8px 12px;font-size:13px;margin-bottom:10px}
-    .update-txt span{font-weight:700;margin-left:6px}
-    .steps-ins{margin-top:10px;margin-bottom:18px;font-size:14px;color:#0f172a}
-    .btn-enter2{display:block;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.12);transition:.2s transform;}
-    .btn-enter2:hover{transform:translateY(-2px)}
-    .progress_box{max-width:520px}
-    .progress-val{font-size:14px;margin:10px 0}
-    .progress{height:10px;background:#eef2ff;border-radius:999px;overflow:hidden}
-    .progress-bar{background:linear-gradient(90deg,#4f46e5,#06b6d4);height:100%}
-    fieldset{border:0;margin:0 0 16px;padding:0}
-    .row{display:grid;gap:10px}
-    .btn-cta{width:100%;border:0;border-radius:12px;padding:14px 16px;font-weight:700;font-size:16px;background:#111827;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.12);transition:transform .1s ease,background .2s ease}
-    .btn-cta:hover{transform:translateY(-1px);background:#0B1220}
-    .btn-q{background:#0f172a}
-    .btn-q:active{transform:translateY(0)}
-    .result{margin-top:8px;padding:16px;border:1px solid var(--rule);border-radius:16px}
-    .cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--cta);color:#fff;border:0;border-radius:999px;padding:14px 20px;font-weight:800;font-size:18px;cursor:pointer;box-shadow:0 12px 28px rgba(34,197,94,.35);transition:box-shadow .2s ease,transform .15s ease}
-    .cta-btn:hover{background:var(--cta-dark);transform:translateY(-1px);box-shadow:0 16px 36px rgba(34,197,94,.4)}
-    .cta-txt{letter-spacing:.4px}
-    .round-bg-icon{width:12px;height:12px;border-radius:999px;background:#fff;opacity:.9}
-    .time{color:#475569;font-size:14px;margin-top:12px}
-    footer{border-top:1px solid var(--rule);margin-top:28px;background:#f8fafc}
-    .section-wrapper2{max-width:var(--max);padding:24px 16px;margin:0 auto}
-    .ftr-logo{height:auto;width:220px}
-    footer ul{list-style:none;padding:0;margin:8px 0;display:flex;gap:14px;flex-wrap:wrap}
-    footer ul a{text-decoration:none;color:#334155}
-    .copyright-txt{font-size:13px;color:#64748b;margin-top:6px}
-    .disclaimer-txt{margin-top:16px}
-    #med{display:block}
-    #med:before{content:"TPMO Disclaimer: We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE (24 hours a day/7 days a week) to get information on all of your options.";font-size:11px;line-height:1.4;margin-top:18px;display:block}
-    /* Mobile tweaks */
-    @media (max-width:480px){
-      .btn-cta{font-size:16px;padding:14px}
-      .cta-btn{width:100%;justify-content:center}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.6;
+    }
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--brand-2);text-decoration:underline}
+    h1,h2,h3,h4{line-height:1.2;margin:0 0 .5rem}
+    p{margin:.75rem 0}
+    ul{margin:.75rem 0;padding-left:1.2rem}
+    hr{border:0;border-top:1px solid var(--rule);margin:2rem 0}
+
+    /* ===============================
+       TOP STRIP (kept from original)
+       =============================== */
+    .top-strip{
+      display:flex;align-items:center;justify-content:center;
+      height:56px;width:100%;
+      background:var(--brand);
+      color:#fff;font-weight:800;font-size:1.05rem;text-align:center;
+    }
+
+    /* ===============================
+       WRAPPERS
+       =============================== */
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+    .hero{
+      display:grid;gap:24px;align-items:center;
+      grid-template-columns: 1fr;
+      background:linear-gradient(180deg,#fff, #f7fafc 50%, #fff 100%);
+      padding:32px 24px;border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .brand-row{
+      display:flex;align-items:center;gap:16px;justify-content:center;margin-bottom:4px
+    }
+    .brand-row img{height:52px;width:auto}
+    .kicker{color:var(--muted);font-weight:600;margin:0;text-align:center}
+    .hero h1{
+      font-size:clamp(22px, 3.6vw, 36px);
+      text-align:center;margin:.25rem 0 .5rem;
+    }
+    .hero p.lede{
+      text-align:center;margin:0 auto 8px;max-width:720px;color:#1f2937
+    }
+    .hero-figure{
+      border-radius:16px;overflow:hidden;border:1px solid var(--rule);
+      background:#fff
+    }
+
+    /* ===============================
+       CALL BUTTONS
+       =============================== */
+    .cta-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;margin:14px 0}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:48px;padding:12px 16px;border-radius:999px;
+      text-decoration:none;border:0;cursor:pointer;
+      background:var(--brand-2);color:#fff;font-weight:700;letter-spacing:.2px;
+      box-shadow:0 6px 20px rgba(23,81,222,.22);
+      transition:transform .08s ease, box-shadow .2s ease, background .2s ease;
+      white-space:nowrap;text-align:center
+    }
+    .btn:hover{background:#1146cf;box-shadow:0 8px 26px rgba(17,70,207,.28)}
+    .btn:active{transform:translateY(1px)}
+    .tty{font-size:.92rem;color:#111;text-align:center;margin-top:2px}
+    .note{font-size:.9rem;color:#374151;text-align:center}
+
+    /* ===============================
+       BULLETS / HOW-TO
+       =============================== */
+    .block{
+      max-width:var(--max-article);margin:24px auto;padding:20px;border-radius:14px;background:#fff;box-shadow:var(--shadow)
+    }
+    .block h2{font-size:clamp(18px, 2.6vw, 28px)}
+    .checklist li{margin:.5rem 0;list-style:none;position:relative;padding-left:28px}
+    .checklist li:before{
+      content:"";position:absolute;left:0;top:.35rem;width:18px;height:18px;border-radius:50%;
+      background:#eaf8ef;border:2px solid #b8ebc8;
+      box-shadow:inset 0 0 0 4px #eaf8ef;
+    }
+    .checklist li strong{font-weight:800}
+
+    /* ===============================
+       DISCLAIMER / LEGAL
+       =============================== */
+    .legal{
+      max-width:var(--max-article);margin:24px auto;padding:0 4px;
+      color:#111
+    }
+    .legal p{font-size:.92rem;color:#111;margin:.6rem 0}
+    .fine{font-size:.86rem;color:#333}
+    .dim{color:#374151}
+    .box{
+      background:#fff;border:1px solid var(--rule);border-radius:12px;padding:16px;margin:16px 0
+    }
+    .footer-links{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0}
+    .footer-links a{text-decoration:underline}
+
+    /* ===============================
+       MODAL (simple subscribe)
+       =============================== */
+    .modal-backdrop{
+      position:fixed;inset:0;background:rgba(0,0,0,.5);
+      display:none;align-items:center;justify-content:center;z-index:50
+    }
+    .modal{
+      width:min(560px, 92vw);background:#fff;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.3);
+      padding:22px
+    }
+    .modal h3{margin:0 0 6px}
+    .modal p{margin:0 0 14px;color:#374151}
+    .row{display:flex;gap:10px}
+    .row input[type="email"]{
+      flex:1;min-height:44px;border-radius:10px;border:1px solid var(--rule);padding:10px 12px;
+      font-size:16px
+    }
+    .row .btn{min-height:44px;border-radius:10px}
+    .modal-actions{display:flex;justify-content:flex-end;margin-top:10px}
+    .link-btn{
+      background:transparent;border:0;color:var(--brand-2);text-decoration:underline;cursor:pointer;font-size:14px
+    }
+
+    /* ===============================
+       UTILS
+       =============================== */
+    .hide{display:none!important}
+    .center{text-align:center}
+    .mt-8{margin-top:8px}
+    .mt-12{margin-top:12px}
+    .mt-16{margin-top:16px}
+    .mt-24{margin-top:24px}
+    .mt-32{margin-top:32px}
+
+    /* ===============================
+       RESPONSIVE GRID
+       =============================== */
+    @media (min-width: 960px){
+      .hero{grid-template-columns: 1.1fr .9fr; padding:42px}
+      .brand-row{justify-content:flex-start}
+      .hero h1,.hero p.lede{text-align:left;margin-left:0;margin-right:0}
     }
   </style>
 </head>
 <body>
-<main>
-  <div class="container-fluid section-wrapper-main">
-    <article>
-      <div class="update-txt">Important Update: <span id="dateDisplay"></span></div>
-      <h1>
-        <strong>
-          <span style="color:#F00;">Enrollment Now Open</span><br />
-          <span style="color:#0015FF">Grocery Allowance Cards Available!</span>
-        </strong>
-      </h1>
-      <h2>
-        Eligible Americans now qualify for a 2026 “Grocery Allowance” Benefit to help cover healthy food costs. Use it for meat, produce, and more at stores like
-        <span style="color:#002CFF">Walmart</span> &amp; <span style="color:#FF0004">Target</span>.
-      </h2>
 
-      <!-- KEEP LOCAL IMAGE ONLY IN SAFE MODE -->
-      <a href="#from-questions" class="btn btn-enter2">
-        <img src="img/ChatGPT Image Jul 1, 2025, 09_25_46 AM.png" width="100%" alt="Get Started" />
-      </a>
-
-      <div id="from-questions" class="steps-ins">
-        Answer three questions to start and see how much you're eligible for...
-      </div>
-    </article>
-
-    <div class="progress_box mx-auto" id="progressBox" style="display:none">
-      <p class="progress-val"><strong><span id="pVal">0</span>%</strong> Complete</p>
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped" id="pBar" role="progressbar" aria-valuenow="0" style="width:12%" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
-
-    <form id="quizForm">
-      <fieldset data-q="1">
-        <h3><strong>Select Your Age:</strong></h3>
-        <div class="row">
-          <button class="btn btn-cta btn-q" type="button">Under 64</button>
-          <button class="btn btn-cta btn-q" type="button">64-69</button>
-          <button class="btn btn-cta btn-q" type="button">70-74</button>
-          <button class="btn btn-cta btn-q" type="button">75+</button>
-        </div>
-      </fieldset>
-
-      <fieldset data-q="2" style="display:none">
-        <h3><strong>Are you on Medicare <span class="br-mobile">Parts A &amp; B?</span></strong></h3>
-        <div class="row">
-          <button class="btn btn-cta btn-q" type="button">Yes</button>
-          <button class="btn btn-cta btn-q" type="button">No</button>
-        </div>
-      </fieldset>
-
-      <fieldset data-q="3" style="display:none">
-        <h3><strong>Need Help Paying for Groceries?</strong></h3>
-        <div class="row">
-          <button class="btn btn-cta btn-q" type="button">✔️ Yes, I Need Help</button>
-          <button class="btn btn-cta btn-q" type="button">❌ No, I’m All Set</button>
-        </div>
-      </fieldset>
-
-      <fieldset data-q="final" style="display:none">
-        <div class="result">
-          <div id="continue-cta-call" style="display:none">
-            <h3><span style="color:#90c156"><strong>Congratulations!</strong></span> You Pre-Qualify for the <strong>Grocery Benefit</strong>.</h3>
-            <p><strong>Your spot is reserved so <u>call</u> within the next 5 minutes before it expires.</strong></p>
-            <a href="tel:(888) 365-9535" rel="noopener">
-              <button type="button" class="cta-btn">
-                <span class="round-bg-icon" aria-hidden="true"></span>
-                <span class="cta-txt">(888) 365-9535</span>
-              </button>
-            </a>
-            <h4 class="time">Your spot is being held for <span id="holdTimer"></span></h4>
-          </div>
-
-          <div id="continue-cta-medicare" style="display:none">
-            <h3><span style="color:#F00">Sorry</span>, you don't qualify at this time.</h3>
-          </div>
-
-          <div id="continue-cta-medicaid" style="display:none">
-            <h3><span style="color:#F00">Sorry</span>, you don't qualify at this time.</h3>
-          </div>
-        </div>
-      </fieldset>
-    </form>
+  <div class="top-strip">
+    Benefits Review – Medicare Advantage Options 
   </div>
-</main>
 
-<footer>
-  <div class="container-fluid section-wrapper2">
-    <div class="row" style="display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+  <main class="wrap">
+    <!-- Brand / Hero -->
+    <section class="hero">
       <div>
-        <img src="img/logo.png" width="280" height="55" class="img-fluid ftr-logo" alt="Logo">
-        <div class="copyright-txt">© <span id="yearNow"></span> nationalsubsidyhelp.com All rights reserved.</div>
+        <div class="brand-row">
+          <!-- Use your local logo file -->
+          <img src="./3.png" alt="Brand Logo" />
+        </div>
+
+        <h1>In 2025, eligible Medicare beneficiaries can select a Medicare Advantage plan that suits their needs!</h1>
+        <p class="lede">
+          <em>Speak with a <strong>licensed insurance agent</strong> to explore the <strong>Medicare Advantage plans</strong> you are eligible for.</em>
+          The call is completely free and comes with <strong>no obligation to enroll</strong>.
+        </p>
+
+        <div class="cta-wrap mt-16">
+          <a id="call-button-1" class="btn" href="tel:+1234567890">Call : 123-456-7890 | TTY 711</a>
+          <div class="tty">*Calling the number above will connect you to a licensed insurance agent.</div>
+          <div class="note"><strong>Available Monday – Friday 9:00 am – 6:00 pm EST</strong></div>
+          <div id="smid-1" class="note">SMID: MULTIPLAN_CFX2025175_M</div>
+        </div>
       </div>
-      <ul>
-        <li><a href="policy.php" target="_blank" rel="noopener">Privacy Policy</a></li>
-        <li><a href="terms.php" target="_blank" rel="noopener">Terms of Service</a></li>
-        <li><a href="contact.php">Contact Us</a></li>
+
+      <figure class="hero-figure">
+        <!-- Use your local main illustration -->
+        <img src="./pic.png" alt="Medicare plan review" />
+      </figure>
+    </section>
+
+    <!-- Informational block -->
+    <section class="block">
+      <p>
+        Eligible Medicare <strong>beneficiaries</strong> might have access to Medicare Advantage plans in their area.
+        They are reaching out to inquire about Medicare Advantage plans that could offer low or $0 monthly premiums.
+      </p>
+      <p>
+        Designed to help enhance the quality of life for Medicare recipients and potentially provide the relief you need,
+        a Medicare Advantage plan may offer various cost-saving benefits.
+      </p>
+      <p>
+        Contact the number below to speak with a licensed insurance agent and find out what you qualify for!
+        Remember: some of these benefits might be available in plans with $0 or low monthly premiums.
+      </p>
+      <p class="fine dim">
+        We work with the following companies as an independent broker:
+        [Aetna Inc., Anthem, Wellpoint, Simply Healthcare, HealthSun, Freedom, Optimum, Cigna Healthcare,
+        Humana Inc., UnitedHealthcare®, and Wellcare Health Plans, Inc.]
+      </p>
+    </section>x
+
+    <!-- Steps -->
+    <section class="block">
+      <h2>All you have to do is:</h2>
+      <ul class="checklist">
+        <li><strong>Step 1:</strong> Simply tap the <strong>call button BELOW</strong></li>
+        <li><strong>Step 2:</strong> <em>Ask the licensed insurance agent about Medicare Advantage plans in your area</em></li>
+        <li><strong>Step 3:</strong> <u>Review the plans and benefits you are eligible for and choose a plan, if it fits your needs.</u></li>
       </ul>
+
+      <h2 class="mt-16">Call Now and Review</h2>
+      <h2 class="mt-8">Medicare Advantage Plans and Benefits...</h2>
+
+      <div class="cta-wrap mt-12">
+        <a id="call-button-2" class="btn" href="tel:+1234567890">Call : 123-456-7890 | TTY 711</a>
+        <div class="tty">*Calling the number above will connect you to a licensed insurance agent.</div>
+        <div class="note"><strong>Available Monday – Friday 9:00 am – 6:00 pm EST</strong></div>
+        <div id="smid-2" class="note">SMID: MULTIPLAN_CFX2025175_M</div>
+      </div>
+    </section>
+
+    <!-- Legal / notifications -->
+    <section class="legal">
+      <div class="box">
+        <p class="fine"><strong>We do not provide every plan available in your area.</strong> Currently, we represent [42] organizations offering [51] products in your area. For information on all available options, please visit <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer nofollow">Medicare.gov</a>, call 1-800-MEDICARE, or reach out to your local State Health Insurance Program (SHIP) to get information on all your options. Enrollment in the mentioned plan type may be restricted to certain times of the year unless you qualify for a special enrollment period. For a comprehensive list of available plans, contact 1-800-MEDICARE (TTY users should dial 1-877-486-2048), available 24/7, or visit <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer nofollow">www.medicare.gov</a>.</p>
+      </div>
+
+      <p class="fine">
+        We represent Medicare Advantage HMO, PPO and PFFS organizations and stand-alone PDP prescription drug plans that are contracted with Medicare. Enrollment depends on the plan’s contract renewal.
+        Allowance amounts cannot be combined with other benefit allowances. Limitations and restrictions may apply.
+      </p>
+
+      <p class="fine">
+        Not all plans offer all of these benefits. Benefits may vary by carrier and location. Limitations and exclusions may apply. Enrollment in Medicare/Medicare Advantage may be limited to certain times of the year unless you qualify for a Special Enrollment Period or Medicare Initial Enrollment Period.
+      </p>
+
+      <p class="fine">
+        prioritybenefitsusa.com is not connected with or endorsed by the US government or Federal Medicare program. This website is a solicitation for insurance and Medicare Advantage, Part D or Medicare supplement insurance comparison services. Medicare supplement insurance is available to those age 65 or older enrolled in Medicare Parts A and B, and in some states to those under age 65 eligible to Medicare due to disability or end stage renal disease.
+      </p>
+
+      <div class="box">
+        <p class="fine">
+          Applies for [Aetna Inc., Anthem, Wellpoint, Simply Healthcare, HealthSun, Freedom, Optimum, Cigna Healthcare, Humana Inc., and Wellcare Health Plans, Inc.]:
+          Some benefit(s) mentioned may be part of a special supplemental program for chronically ill members with one of the following conditions: Diabetes mellitus, Cardiovascular disorders, Chronic and disabling mental health conditions, Chronic lung disorders, Chronic heart failure. This is not a complete list of qualifying conditions. Having a qualifying condition alone does not mean you will receive the benefit(s). Other requirements may apply.
+        </p>
+      </div>
+
+      <p class="fine">Please contact Medicare.gov, 1–800–MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options.</p>
+      <p class="fine"><strong>Available Monday – Friday 9:00 am – 6:00 pm EST</strong></p>
+
+      <div class="footer-links">
+        <a href="./terms.html">Terms</a>
+        <a href="./privicy.html">Privacy Policy</a>
+      </div>
+    </section>
+  </main>
+
+
+  <div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <h3 id="modal-title">Don't miss out!</h3>
+      <p>Subscribe to our weekly newsletter for savings, reviews, and more—delivered straight to your inbox.</p>
+      <form onsubmit="event.preventDefault(); alert('Thanks! You’re subscribed.'); hideModal();">
+        <div class="row">
+          <input type="email" name="email" placeholder="Email" required />
+          <button class="btn" type="submit">Sign up</button>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="link-btn" onclick="hideModal()">Close</button>
+        </div>
+      </form>
     </div>
-    <p class="disclaimer-txt">
-      <img src="img/footer.jpg" width="100%" alt="Disclaimer" />
-    </p>
-    <div id="med"></div>
   </div>
-</footer>
 
-<!-- ====== LOCAL, SAFE JS ONLY ====== -->
-<script>
-  // Date stamp and footer year
-  (function(){
-    const d = new Date();
-    const opts = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
-    const disp = d.toLocaleDateString(undefined, opts);
-    document.getElementById('dateDisplay').textContent = ' ' + disp;
-    document.getElementById('yearNow').textContent = d.getFullYear();
-  })();
-
-  // UTM param helpers (no third-party calls)
-  const _mc_ageMap = {
-    "under 64":"under64","64-69":"64-69","70-74":"70-74","75+":"75+",
-    "under64":"under64","70-74":"70-74"
-  };
-  function _mc_updateParam(param, value) {
-    const currentURL = window.location.href;
-    const newParam = param + '=' + encodeURIComponent((value||'').trim());
-    const hasQuery = currentURL.includes('?');
-    const alreadySet = currentURL.includes(param + '=');
-    const updatedURL = alreadySet
-      ? currentURL.replace(new RegExp(param + '=[^&]*'), newParam)
-      : currentURL + (hasQuery ? '&' : '?') + newParam;
-    window.history.replaceState(null, '', updatedURL);
-  }
-  function _mc_handleClick(text) {
-    const cleaned = (text || '').replace(/\u00A0/g,' ').trim();
-    const lc = cleaned.toLowerCase();
-    // Age
-    if (_mc_ageMap[cleaned] || /^(\d{1,3})(\+)?$/.test(lc) || /^(\d{1,3})\s*-\s*(\d{1,3})$/.test(lc) || /^under\s?\d{1,3}$/.test(lc) || /^over\s?\d{1,3}$/.test(lc)) {
-      _mc_updateParam('utm_age', _mc_ageMap[cleaned] || cleaned);
-    }
-    // Medicare A/B
-    if (lc === 'yes' || lc === 'no' || lc.includes('i need help') || lc.includes('i’m all set') || lc.includes("i'm all set")) {
-      _mc_updateParam('utm_medicareAB', lc);
-    }
-  }
-
-  // Quiz flow
-  (function(){
-    const form = document.getElementById('quizForm');
-    const fieldsets = Array.from(form.querySelectorAll('fieldset'));
-    const progressBox = document.getElementById('progressBox');
-    const pVal = document.getElementById('pVal');
-    const pBar = document.getElementById('pBar');
-    const totalSteps = 3;
-    let currentStep = 1;
-
-    function setProgress(step){
-      const pct = Math.round((step-1) / totalSteps * 100);
-      pVal.textContent = pct;
-      pBar.style.width = Math.max(12, pct) + '%';
-      pBar.setAttribute('aria-valuenow', pct);
+  <script>
+    // ===========
+    // UTILITIES
+    // ===========
+    function getQueryParam(param){
+      try{
+        const url = new URL(window.location.href);
+        return url.searchParams.get(param);
+      }catch{ return null; }
     }
 
-    function showStep(n){
-      fieldsets.forEach(fs => {
-        const q = fs.getAttribute('data-q');
-        fs.style.display = (q == n) ? '' : 'none';
-      });
-      if (n === 'final') {
-        progressBox.style.display = '';
-        setProgress(totalSteps + 1);
-      } else {
-        progressBox.style.display = '';
-        setProgress(Number(n));
+   
+    (function(){
+      const sub1 = getQueryParam('sub1');
+      const newNumber = "+18334253169";
+      const label = "Call : +1 833-425-3169 | TTY 711";
+
+      const btn1 = document.getElementById('call-button-1');
+      const btn2 = document.getElementById('call-button-2');
+
+      if (sub1 === '14'){
+        if (btn1){ btn1.href = "tel:" + newNumber; btn1.textContent = label; }
+        if (btn2){ btn2.href = "tel:" + newNumber; btn2.textContent = label; }
       }
-    }
+    })();
 
-    // initial
-    showStep(1);
+  
+    const modal = document.getElementById('modal-backdrop');
+    function showModal(){ modal.style.display = 'flex'; }
+    function hideModal(){ modal.style.display = 'none'; }
 
-    // button handler
-    form.addEventListener('click', (e)=>{
-      const el = e.target.closest('button');
-      if(!el) return;
-      e.preventDefault();
-
-      // capture utm on any answer
-      _mc_handleClick(el.textContent || '');
-
-      if (currentStep < totalSteps) {
-        currentStep++;
-        showStep(currentStep);
-        return;
-      }
-
-      // FINAL DECISION (simple demo logic; adjust as needed)
-      showStep('final');
-      const ans2 = _getAnswerText(2) || '';
-      const wantsHelp = _getAnswerText(3) || '';
-      const callBox = document.getElementById('continue-cta-call');
-      const denyMedicare = document.getElementById('continue-cta-medicare');
-      const denyMedicaid = document.getElementById('continue-cta-medicaid');
-
-      // Example logic:
-      // If Medicare Yes and Needs Help -> show call CTA
-      if (ans2.toLowerCase() === 'yes' && wantsHelp.toLowerCase().includes('yes')) {
-        callBox.style.display = '';
-        denyMedicare.style.display = 'none';
-        denyMedicaid.style.display = 'none';
-        startHoldTimer(5); // 5 minutes
-      } else {
-        callBox.style.display = 'none';
-        // you can choose which “sorry” box to show; here we use medicare
-        denyMedicare.style.display = '';
-        denyMedicaid.style.display = 'none';
-      }
-    });
-
-    function _getAnswerText(stepNumber){
-      // in this simple version, the "answer" is the last clicked button within that fieldset
-      const fs = form.querySelector(`fieldset[data-q="${stepNumber}"]`);
-      if(!fs) return '';
-      return fs.getAttribute('data-last') || '';
-    }
-
-    // record last clicked per step
-    form.addEventListener('click', (e)=>{
-      const btn = e.target.closest('button');
-      if (!btn) return;
-      const fs = btn.closest('fieldset');
-      if (!fs) return;
-      fs.setAttribute('data-last', (btn.textContent || '').trim());
-    });
-
-    function startHoldTimer(minutes){
-      const until = Date.now() + minutes*60*1000;
-      const el = document.getElementById('holdTimer');
-      function tick(){
-        const diff = Math.max(0, until - Date.now());
-        const m = Math.floor(diff/60000);
-        const s = Math.floor((diff%60000)/1000);
-        el.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-        if (diff > 0) requestAnimationFrame(()=>setTimeout(tick,250));
-      }
-      tick();
-    }
-  })();
-</script>
+   
+  </script>
 </body>
 </html>
